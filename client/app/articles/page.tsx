@@ -91,7 +91,7 @@ export default async function Page({
         </div>
       </div>
 
-      <Suspense key={query + currentPage} fallback={<ArticlesLoader />}>
+      <Suspense key={query + currentPage + sort} fallback={<ArticlesLoader />}>
         <ArticleList query={query} currentPage={currentPage} sort={sort} />
       </Suspense>
     </div>
